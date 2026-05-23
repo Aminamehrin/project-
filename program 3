@@ -1,0 +1,27 @@
+text =  "the cat and the dog and the bird"    #input 
+
+# Convert to lowercase and split into words
+words = text.lower().split()
+
+# Count frequency of each word
+freq = {}
+
+for word in words:
+    if word in freq:
+        freq[word] += 1
+    else:
+        freq[word] = 1
+
+# Find maximum frequency
+max_count = max(freq.values())
+
+# Store words having maximum frequency
+result = []
+
+for word in freq:
+    if freq[word] == max_count:
+        result.append(word)
+
+# Sort alphabetically and print first word
+result.sort()
+print(result[0])
