@@ -1,0 +1,16 @@
+def second_largest(arr):
+    unique_numbers = list(set(arr))
+
+    if len(unique_numbers) < 2:
+        return -1
+
+    unique_numbers.sort()
+
+    return unique_numbers[-2]
+
+
+# Input
+arr =  [3, 1, 4, 1, 5, 9, 2, 6]
+
+# Output
+print(second_largest(arr))
