@@ -1,0 +1,12 @@
+s ="A man a plan a canal Panama"  # input
+
+cleaned = ""
+
+for ch in s:
+    if ch.isalnum():      # Keep only letters and digits
+        cleaned += ch.lower()
+
+if cleaned == cleaned[::-1]:
+    print(True)
+else:
+    print(False)
